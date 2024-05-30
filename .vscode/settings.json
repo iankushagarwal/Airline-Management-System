@@ -2,6 +2,7 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "Libraries/mysql-connector-java-8.0.28.jar",
-        "Libraries/rs2xml.jar"
+        "Libraries/rs2xml.jar",
+        "Libraries/jcalendar-tz-1.3.3-4.jar"
     ]
 }
