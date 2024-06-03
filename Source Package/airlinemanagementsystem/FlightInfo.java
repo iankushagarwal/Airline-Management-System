@@ -33,7 +33,6 @@ public class FlightInfo extends JFrame{
 
         setSize(800, 500);
         setLocation(400, 200);
-        // setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
 

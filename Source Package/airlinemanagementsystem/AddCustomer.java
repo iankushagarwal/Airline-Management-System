@@ -106,7 +106,6 @@ public class AddCustomer extends JFrame implements ActionListener {
         add(image);
 
         setSize(900, 600);
-        // setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocation(500, 150);
         setVisible(true);
 

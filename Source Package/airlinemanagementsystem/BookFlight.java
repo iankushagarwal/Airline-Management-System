@@ -184,7 +184,6 @@ public class BookFlight extends JFrame implements ActionListener {
         add(bookflight);
 
         setSize(1100, 800);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocation(410, 150);
         setVisible(true);
     }
@@ -264,7 +263,7 @@ public class BookFlight extends JFrame implements ActionListener {
 
                 Conn conn = new Conn();
 
-                String query = "INSERT INTO reservations VALUES ('PNR-" + random.nextInt(1000000) + "', 'TIC-" + random.nextInt(1000) + "', '" + aadharbk + "', '" + genderbk + "', '" + namebk + "', '" + nationaltybk + "', '" + addressbk + "', '" + phonebk + "', '" + fnamebk + "', '" + fcodebk + "', '" + srcbk + "', '" + destbk + "', '" + ddatebk + "')"; 
+                String query = "INSERT INTO booking VALUES ('PNR-" + random.nextInt(1000000) + "', 'TIC-" + random.nextInt(1000) + "', '" + aadharbk + "', '" + genderbk + "', '" + namebk + "', '" + nationaltybk + "', '" + addressbk + "', '" + phonebk + "', '" + fnamebk + "', '" + fcodebk + "', '" + srcbk + "', '" + destbk + "', '" + ddatebk + "')"; 
 
                 conn.s.executeUpdate(query);
                 JOptionPane.showMessageDialog(null,"Ticket Booked succesfully");

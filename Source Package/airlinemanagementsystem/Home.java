@@ -1,9 +1,7 @@
-// import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.*;
 
 public class Home extends JFrame implements ActionListener {
@@ -36,13 +34,16 @@ public class Home extends JFrame implements ActionListener {
         mnuItem2.addActionListener(this);
         mnu.add(mnuItem2);
 
-        JMenuItem mnuItem3 = new JMenuItem("Book Flights");
+        JMenuItem mnuItem3 = new JMenuItem("Book Flight");
+        mnuItem3.addActionListener(this);
         mnu.add(mnuItem3);
 
-        JMenuItem mnuItem4 = new JMenuItem("Journey Deatils");
+        JMenuItem mnuItem4 = new JMenuItem("Journey Details");
+        mnuItem4.addActionListener(this);
         mnu.add(mnuItem4);
 
         JMenuItem mnuItem5 = new JMenuItem("Tickets Cancellation");
+        mnuItem5.addActionListener(this);
         mnu.add(mnuItem5);
 
         JMenu mnu2 = new JMenu("Tickets");
@@ -72,8 +73,15 @@ public class Home extends JFrame implements ActionListener {
         } else if (text.equals("Flight Deatils")){
             new FlightInfo();
 
-        }
+        } else if (text.equals("Book Flight")){
+            new BookFlight();
+            
+        } else if (text.equals("Journey Details")){
+            new JourneyDetails();
 
+        } else if (text.equals("Tickets Cancellation")){
+            new Cancel();
+        }
 
     }
 

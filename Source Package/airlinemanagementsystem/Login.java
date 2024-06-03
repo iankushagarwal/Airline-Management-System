@@ -5,7 +5,7 @@ import java.sql.*;
 
 public class Login extends JFrame implements ActionListener {
 
-    JButton reset, submit, close;
+    JButton reset, submit, signup;
     JTextField jtuser;
     JPasswordField jtpwd;
 
@@ -34,15 +34,19 @@ public class Login extends JFrame implements ActionListener {
         reset.addActionListener(this);
         add(reset);
 
-        submit = new JButton("Submit");
+        submit = new JButton("LogIn");
         submit.setBounds(250, 120, 120, 20);
         submit.addActionListener(this);
         add(submit);
 
-        close = new JButton("Close");
-        close.setBounds(150, 150, 120, 20);
-        close.addActionListener(this);
-        add(close);
+        JLabel jsign = new JLabel("Don't Have an Account?");
+        jsign.setBounds(140, 170, 150, 20);
+        add(jsign);
+
+        signup = new JButton("Sign Up");
+        signup.setBounds(145, 200, 120, 20);
+        signup.addActionListener(this);
+        add(signup);
 
         setSize(450, 320);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -73,7 +77,8 @@ public class Login extends JFrame implements ActionListener {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        } else if (ae.getSource() == close) {
+        } else if (ae.getSource() == signup) {
+            new SignUp();
             setVisible(false);
         }
     }
